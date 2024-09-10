@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class lengthCharacter {
 
     public static void main(String[] args) {
@@ -26,6 +28,44 @@ public class lengthCharacter {
         System.out.println("After splitting by using Substring- "+x.substring(4));
         //Using Beginning  and Ending Index
         System.out.println("After splitting by using Substring- "+x.substring(1,5));
+
+        //Using Random to genarate Random Number
+        Random random= new Random();
+        int RandomNUmber=random.nextInt(100);
+        System.out.println("sayed"+RandomNUmber+"@gmail.com");
+
+        //call Static method
+        lengthCharacter.name();
+        //call static with the argument
+        lengthCharacter.name2("Fat ", "Fish");
+
+        //calling the return type method
+        lengthCharacter object=new lengthCharacter();
+        int y=object.summation();
+        System.out.println("The Returned Value from the Return Type method- "+y);
+    }
+
+    //create a non-return type Static Method
+    public static void name() {
+        System.out.println("Fat");
+        System.out.println("Razib");
+    }
+
+    //non-return type Static method with Argument, using the same name
+
+    public static void name2(String x, String y){
+
+        System.out.println(x+y);
+
+
+    }
+
+    // Return type method
+    public int summation(){
+        int firstNumber, secondNumber, sum;
+        firstNumber=10;
+        secondNumber=20;
+        sum=firstNumber+secondNumber;
+        return sum;
     }
 }
-
