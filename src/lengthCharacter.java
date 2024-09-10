@@ -50,6 +50,8 @@ public class lengthCharacter {
         // Calling the Return type method with the parameter
         int subtractResult= object.subtract(50, 10);
         System.out.println("The Returned Value from the Return Type method with Argument is - "+subtractResult);
+
+       // LearnSingleTon learn=LearnSingleTon.singleton();
     }
 
     //create a non-return type Static Method
