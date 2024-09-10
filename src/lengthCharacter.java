@@ -29,10 +29,12 @@ public class lengthCharacter {
         //Using Beginning  and Ending Index
         System.out.println("After splitting by using Substring- "+x.substring(1,5));
 
+
         //Using Random to genarate Random Number
         Random random= new Random();
         int RandomNUmber=random.nextInt(100);
         System.out.println("sayed"+RandomNUmber+"@gmail.com");
+
 
         //call Static method
         lengthCharacter.name();
@@ -41,8 +43,13 @@ public class lengthCharacter {
 
         //calling the return type method
         lengthCharacter object=new lengthCharacter();
-        int y=object.summation();
-        System.out.println("The Returned Value from the Return Type method- "+y);
+        int summationResult=object.summation();
+        System.out.println("The Returned Value from the Return Type method- "+summationResult);
+
+
+        // Calling the Return type method with the parameter
+        int subtractResult= object.subtract(50, 10);
+        System.out.println("The Returned Value from the Return Type method with Argument is - "+subtractResult);
     }
 
     //create a non-return type Static Method
@@ -67,5 +74,11 @@ public class lengthCharacter {
         secondNumber=20;
         sum=firstNumber+secondNumber;
         return sum;
+    }
+
+    //Return type method with the Argument
+    public int subtract(int firstValue, int secondValue){
+        int finalValue= firstValue-secondValue;
+        return finalValue;
     }
 }
